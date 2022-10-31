@@ -59,11 +59,15 @@ class BST:
 
     def preorder(self, root):
         if root:
-            print(root.value)
+            print(root.value, end=' ')
             self.preorder(root.left)
-            #print(root.value, end=' ')
             self.preorder(root.right)
 
+    def inorder(self, root):
+        if root:
+            self.inorder(root.left)
+            print(root.value, end=' ')
+            self.inorder(root.right)
 
 
 bst = BST()
@@ -78,8 +82,9 @@ bst.insert(67)
 
 print('BFS:')
 bst.print_bfs()
-print('\n')
-print('Leaves:')
+print('\nLeaves:')
 bst.print_leaves()
-print('\nDFS:')
+print('\nPreorder:')
 bst.preorder(bst.root)
+print('\nInorder:')
+bst.inorder(bst.root)
