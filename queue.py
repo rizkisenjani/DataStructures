@@ -6,30 +6,30 @@ class NodeQ:
 
 class Queue:
     def __init__(self):
-        self.head = None
-        self.tail = None
+        self.first = None
+        self.last = None
 
     def add(self, value):
-        if self.head:
-            self.tail.next = NodeQ(value)
-            self.tail = self.tail.next
+        if self.first:
+            self.last.next = NodeQ(value)
+            self.last = self.last.next
         else:
-            self.head = self.tail = NodeQ(value)
+            self.first = self.last = NodeQ(value)
 
     def empty(self):
-        if self.head:
+        if self.first:
             return False
         else:
             return True
 
     def pop(self):
-        if self.head:
-            head = self.head
-            self.head = self.head.next
+        if self.first:
+            head = self.first
+            self.first = self.first.next
             return head.value
 
     def print_q(self):
-        node = self.head
+        node = self.first
         while not self.empty():
             print(node.value)
             if node.next is not None:
