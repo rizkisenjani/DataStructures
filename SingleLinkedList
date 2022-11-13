@@ -24,7 +24,7 @@ class SingleLinkedList:
              
      def search(self, key):
          found = self.head
-         while find:
+         while found:
              if key == found.value:
                  return True
              else:
