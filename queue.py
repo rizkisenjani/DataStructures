@@ -32,7 +32,7 @@ class Queue:
         node = self.first
         while not self.empty():
             print(node.value)
-            if node.next is not None:
+            if node.next:
                 node = node.next
             else:
                 break
