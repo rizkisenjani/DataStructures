@@ -4,7 +4,7 @@ class Node:
         self.next = None
         self.previous = None
         
-class SinglyLinkedList:
+class DoubleLinkedList:
      def  __init__(self):
          self.head = None
          self.tail = None
@@ -25,10 +25,10 @@ class SinglyLinkedList:
              node = node.next
              
      def search(self, key):
-             find = self.head
-             while find:
-                 if key == find.value:
+             check = self.head
+             while check:
+                 if key == check.value:
                      return True
                  else:
-                     find = find.next
+                     check = check.next
              return False
