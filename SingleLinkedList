@@ -23,10 +23,10 @@ class SingleLinkedList:
              node = node.next
              
      def search(self, key):
-         found = self.head
-         while found:
-             if key == found.value:
+         check = self.head
+         while check:
+             if key == check.value:
                  return True
              else:
-                 found = found.next
+                 check = check.next
          return False
