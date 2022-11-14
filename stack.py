@@ -22,7 +22,7 @@ class Stack:
         else:
             return True
 
-    def print_s(self):
+    def print_stack(self):
         node = self.top
         while not self.empty():
             print(node.value)
