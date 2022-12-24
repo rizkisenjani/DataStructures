@@ -1,6 +1,5 @@
 from queue import Queue
 
-
 class NodeBST:
     def __init__(self, value):
         self.value = value
