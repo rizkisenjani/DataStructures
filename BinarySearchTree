@@ -32,6 +32,7 @@ class BST:
         else:
             self.root = NodeBST(value)
 
+# we can apply bfs method to do post order traversal
     def print_bfs(self):
         q = Queue()
         q.add(self.root)
